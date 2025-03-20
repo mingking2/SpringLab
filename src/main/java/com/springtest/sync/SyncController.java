@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping("/sync")
-@Log4j2
+@RequestMapping
+@Slf4j
 public class SyncController {
 
 	private final ExecutorService executor = Executors.newSingleThreadExecutor(); // 단일 스레드 실행
